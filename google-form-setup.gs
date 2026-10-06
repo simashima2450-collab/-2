@@ -61,8 +61,8 @@ function validatedBase_() {
   return value.replace(/\/+$/, '');
 }
 function narrativeDescription_(base) {
-  return '物件名：窓辺に残る時間\n東京都江東区清澄2丁目／清澄白河駅 徒歩8分\n1LDK・45.4㎡・1983年築・3階／4階建\n物件ページを見直す：\n' + base + '/narrative.html';
+  return '物件名：木の窓辺に残る時間\n東京都江東区清澄2丁目／清澄白河駅 徒歩8分\n1LDK・45.4㎡・1983年築・3階／4階建\n物件ページを見直す：\n' + base + '/narrative.html';
 }
 function generalDescription_(base) {
-  return '物件名：土橋の明るい1LDK\n神奈川県川崎市宮前区土橋2丁目／鷺沼駅 徒歩10分\n1LDK・43.2㎡・2016年築・3階／5階建\n物件ページを見直す：\n' + base + '/general.html';
+  return '物件名：光を受けとめる白い部屋\n神奈川県川崎市宮前区土橋2丁目／鷺沼駅 徒歩10分\n1LDK・43.2㎡・2016年築・3階／5階建\n物件ページを見直す：\n' + base + '/general.html';
 }
