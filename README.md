@@ -14,9 +14,13 @@ index.html が表紙です。一般型、文章型、価格表示型の３物件
 
 ## Googleフォーム
 
-まだ作成されていないため、survey.html の「アンケートへ」は現在無効です。Googleフォームの回答者用URLが必要です。survey.html 内の `const formUrl = '';` の引用符内にそのURLを貼り付けると有効になります。編集用URLは入れないでください。
+Googleフォームは作成済みです。survey.html の「アンケートへ」に回答用URLを設定しました。今回の更新では、公開元の survey.html を同名ファイルで上書きしてください。その他のHTMLは変更していません。
 
-google-form-setup.gs をご自身のGoogle Apps Scriptに貼り付け、SITE_BASE_URLに公開したサイトURLを入力し、createDraftSurveyを実行すると、ご自身のGoogleアカウントで編集可能な下書きフォームを作成します。実行ログの編集URLからフォームを確認して公開し、回答者用URLを取得してください。
+- 回答用URL：https://docs.google.com/forms/d/e/1FAIpQLSf43rA2d6mcF_ZeTh82Hp0TnoMcRNPMNwv_TPi7VMHCKZTKew/viewform?usp=publish-editor
+- 文章ありへ戻るURL：https://simashima2450-collab.github.io/-2/narrative.html
+- 文章なしへ戻るURL：https://simashima2450-collab.github.io/-2/general.html
+
+Googleフォーム側の戻りリンクも設定済みです。google-form-setup.gs は新規作成用の補助スクリプトで、今回は実行不要です。
 
 フォームは文章ありと文章なしを別セクションにし、各概要と元ページへのリンク、空間の想像と月額賃料の記述式質問を置きます。仮の質問順は、空間の想像→賃料です。セクション順や質問もフォーム編集画面から変更できます。survey-draft.html は設問確認用です。入力を送信・保存しません。
 
