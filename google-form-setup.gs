@@ -13,7 +13,7 @@ function createDraftSurvey() {
   const base = validatedBase_();
   const form = FormApp.create('物件ページから想像する空間についてのアンケート', false);
   props.setProperty('SURVEY_FORM_ID', form.getId());
-  form.setDescription('閲覧した二つの物件について、想像した空間と妥当だと思う月額賃料をお聞かせください。各ページのリンクから物件情報を見直せます。記載されている物件は研究用の架空物件です。');
+  form.setDescription('閲覧した二つの物件について、想像した空間と妥当だと思う購入価格をお聞かせください。各ページのリンクから物件情報を見直せます。記載されている物件は研究用の架空物件です。');
   form.setCollectEmail(false);
   form.setProgressBar(true);
   form.setShuffleQuestions(false);
@@ -35,8 +35,8 @@ function addQuestions_(form) {
     .setHelpText('思い浮かんだことを、ご自身の言葉で自由にお書きください。')
     .setRequired(true);
   form.addTextItem()
-    .setTitle('この物件の月額賃料として、いくらが妥当だと思いますか。')
-    .setHelpText('管理費を含めず、円または万円の単位を付けてお書きください。')
+    .setTitle('この物件の購入価格として、いくらが妥当だと思いますか。')
+    .setHelpText('物件本体の価格について、万円の単位を付けてお書きください。購入時の諸費用は含めないでください。')
     .setRequired(true);
 }
 
