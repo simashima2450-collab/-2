@@ -71,6 +71,17 @@ textarea:focus,input:focus{outline:2px solid var(--accent);outline-offset:2px}
 
 button.action{border:0;font:inherit;cursor:pointer}button.action:disabled{opacity:.48;cursor:not-allowed}.cover{min-height:65vh;display:flex;flex-direction:column;justify-content:center;max-width:850px}.cover p{max-width:650px}.cover .action{align-self:flex-start}.progress{font-size:13px;letter-spacing:.1em;color:var(--muted)}.flow-actions{text-align:center;border-top:1px solid var(--line);padding-top:25px;margin-top:30px}.cover h1{font-size:clamp(32px,5vw,52px)}
 .photo-open{display:block;width:100%;border:0;background:#fff;padding:0;cursor:zoom-in}.photo-open:focus-visible{outline:3px solid #64746c;outline-offset:3px}.photo-gallery{margin:32px 0 40px}.photo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.photo-grid figure{margin:0}.photo-grid img{display:block;width:100%;height:auto;aspect-ratio:auto;object-fit:contain}.photo-grid figcaption{padding-top:8px;font-size:13px;color:var(--muted)}.photo-dialog{border:0;border-radius:8px;padding:14px;width:min(94vw,1200px);max-width:94vw;max-height:94vh;overflow:auto}.photo-dialog::backdrop{background:rgba(0,0,0,.72)}.photo-dialog img{display:block;max-width:100%;max-height:80vh;object-fit:contain;margin:auto}.photo-close{display:block;margin:0 0 12px auto;padding:8px 14px;border:1px solid #ccc;border-radius:4px;background:white;cursor:pointer}@media(max-width:650px){.photo-grid{grid-template-columns:1fr;gap:20px}}
+
+/* Unified uncropped photo frames and lower-right captions. */
+.visual,.photo-grid figure{position:relative;margin:0;min-width:0;overflow:hidden;background:#eef0ed}
+.visual .photo-open,.photo-grid .photo-open{display:grid;place-items:center;position:relative;width:100%;height:auto;aspect-ratio:3/2;padding:0;margin:0;border:0;overflow:hidden;background:#eef0ed}
+.visual .photo-open img,.photo-grid .photo-open img{display:block;width:100%;height:100%;max-width:100%;max-height:100%;aspect-ratio:auto;object-fit:contain;object-position:50% 50%;margin:0}
+.visual>figcaption,.photo-grid figure>figcaption{position:absolute;right:10px;bottom:10px;z-index:2;max-width:calc(100% - 20px);margin:0;padding:5px 9px;background:rgba(255,255,255,.9);color:#35423c;text-align:right;font-size:12px;line-height:1.5;border-radius:3px;pointer-events:none;overflow-wrap:anywhere}
+.photo-grid{align-items:start}
+.thumb-photo{position:relative;overflow:hidden;aspect-ratio:3/2;background:#eef0ed}
+.property-review-card .thumb-photo img{display:block;width:100%;height:100%;aspect-ratio:auto;object-fit:contain;object-position:center}
+.thumb-caption{position:absolute;right:7px;bottom:7px;max-width:calc(100% - 14px);padding:3px 6px;background:rgba(255,255,255,.9);color:#35423c;font-size:10px;line-height:1.5;border-radius:2px;pointer-events:none}
+@media(max-width:650px){.visual>figcaption,.photo-grid figure>figcaption{right:7px;bottom:7px;max-width:calc(100% - 14px);padding:4px 7px;font-size:11px}}
 </style></head>
 <body><header class="site-head"><div class="site-head__inner"><div class="brand">住まいの想像</div><div class="head-note">住まいを見つめる、小さな案内所</div></div></header>
 <main><p class="kicker">HOME FOR SALE / 中古マンション</p><h1>光を受けとめる白い部屋</h1><p class="subtitle">南向きの窓から光が入る、使いやすい住まい。</p>
