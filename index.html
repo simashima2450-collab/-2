@@ -85,6 +85,10 @@ button.action{border:0;font:inherit;cursor:pointer}button.action:disabled{opacit
 .cover-form{max-width:580px;width:100%;margin:22px 0}.cover-form label{display:block;margin:18px 0 6px;font-size:15px}.cover-form input{display:block;width:100%;padding:12px;border:1px solid var(--line);border-radius:4px;font:inherit}.cover-form .help{font-size:12px}.form-error{color:#9c3838;min-height:1.7em}.summary-main{max-width:1160px}.summary-intro{max-width:760px}.summary-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin:24px 0}.summary-card{display:flex;flex-direction:column;border:1px solid var(--line);background:white;text-decoration:none;color:var(--ink);overflow:hidden;border-radius:4px}.summary-card:focus-visible{outline:3px solid var(--accent);outline-offset:3px}.summary-card:hover{box-shadow:0 7px 24px #26312f15}.summary-photo{position:relative;aspect-ratio:3/2;background:#eef0ed}.summary-photo img{width:100%;height:100%;object-fit:contain;object-position:center}.summary-caption{position:absolute;right:7px;bottom:7px;background:#ffffffe6;padding:3px 6px;font-size:10px;color:#35423c;border-radius:2px}.summary-body{padding:18px;flex:1}.summary-body h3{font-size:19px;line-height:1.5;margin:0 0 12px;padding:0;border:0;font-weight:500}.summary-body p{font-size:13px;color:var(--muted);line-height:1.7;margin:0 0 8px}.summary-price{font-size:19px;font-weight:500;margin-top:12px}.summary-card-link{display:block;color:var(--accent);font-size:13px;margin-top:14px}.summary-controls{text-align:center;border-top:1px solid var(--line);padding-top:25px}.subtle{font-size:12px;color:var(--muted)}.back-link{color:var(--accent);font-size:14px}.summary-final-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.summary-section{margin-top:38px}.summary-section h2{font-size:23px;font-weight:500;margin-bottom:10px}
 @media(max-width:780px){.summary-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:500px){.summary-grid,.summary-final-grid{grid-template-columns:1fr}.summary-body h3{font-size:19px}}
+
+/* Captions sit below the image, aligned to the right. */
+.visual,.photo-grid figure{overflow:visible;background:transparent}
+.visual>figcaption,.photo-grid figure>figcaption{position:static;max-width:none;margin:0;padding:8px 0 0;background:transparent;color:var(--muted);text-align:right;font-size:12px;line-height:1.5;border-radius:0;pointer-events:auto;overflow-wrap:anywhere}
 </style></head><body><header class="site-head"><div class="site-head__inner"><span class="brand">住まいの想像</span><span class="head-note">住まいを見つめる、小さな案内所</span></div></header><main class="cover"><p class="kicker">住まいの閲覧とアンケート</p><h1>想像する空間</h1><p>あなたは、実際にこれから生活するための家を買おうとしています。<br>これから、6つの中古マンションの売買物件ページをご覧いただきます。<br>実際に物件を探すつもりで、それぞれのページをご覧ください。</p><p>各物件をご覧いただいた後、アンケートへお進みください。</p><p class="status">掲載物件と画像は、研究用に制作した架空のものです。</p><form id="entry-form" class="cover-form"><label for="participant-name">名前</label><input id="participant-name" name="name" autocomplete="name" maxlength="80" required><label for="participant-number">番号</label><input id="participant-number" name="number" type="text" inputmode="numeric" autocomplete="off" maxlength="64" required><p class="help">指定された番号を数字で入力してください。</p><p class="help">入力情報はこのタブ内でのみ保持され、アンケートへ自動送信されません。</p><p id="entry-error" class="form-error" role="alert"></p><button class="action" type="submit">次へ →</button></form></main><footer class="site-foot">このページの物件と画像は研究用に制作した架空のものです。実際の販売物件ではありません。</footer><script>const SixExperiment=(()=>{
  const experiments=['dobashi','kiyosumi','ota','kibogaoka'];
  const textPairs=[['dobashi','kiyosumi'],['dobashi','ota'],['dobashi','kibogaoka'],['kiyosumi','ota'],['kiyosumi','kibogaoka'],['ota','kibogaoka']];
@@ -98,7 +102,18 @@ button.action{border:0;font:inherit;cursor:pointer}button.action:disabled{opacit
  function summaryUrl(group){return 'summary-'+group+'.html';}
  function pageUrl(item,group){return item.property+'-'+item.role+'.html?group='+group;}
  function surveyUrl(group){return 'survey.html?group='+group;}
- return {remainder,normalizeNumber,items,saveProfile,readProfile,readGroup,summaryUrl,pageUrl,surveyUrl};
+ function orderedItems(group){
+  const list=items(group);if(!list)return null;
+  const key='six-experiment-order-'+group;
+  try{const order=JSON.parse(sessionStorage.getItem(key)||'null');if(Array.isArray(order)&&order.length===list.length&&new Set(order).size===list.length&&order.every(p=>list.some(x=>x.property===p)))return order.map(p=>list.find(x=>x.property===p));}catch(e){}
+  for(let i=list.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[list[i],list[j]]=[list[j],list[i]];}
+  try{sessionStorage.setItem(key,JSON.stringify(list.map(x=>x.property)));}catch(e){}
+  return list;
+ }
+ function arrangeCards(grid,group){
+  for(const item of orderedItems(group)||[]){const card=grid.querySelector('[data-property="'+item.property+'"]');if(card){card.href=pageUrl(item,group);card.dataset.role=item.role;grid.appendChild(card);}}
+ }
+ return {remainder,normalizeNumber,items,orderedItems,arrangeCards,saveProfile,readProfile,readGroup,summaryUrl,pageUrl,surveyUrl};
 })();
 
 const form=document.getElementById('entry-form');const old=SixExperiment.readProfile();if(old){document.getElementById('participant-name').value=old.name;document.getElementById('participant-number').value=old.number;}form.addEventListener('submit',event=>{event.preventDefault();const name=document.getElementById('participant-name').value,number=document.getElementById('participant-number').value;const p=SixExperiment.saveProfile(name,number);if(!p){document.getElementById('entry-error').textContent='名前と、数字のみの番号を入力してください。';return;}window.location.href=SixExperiment.summaryUrl(p.group);});</script></body></html>
