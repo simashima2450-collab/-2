@@ -1,0 +1,62 @@
+[
+  {
+    "property": "nishiogikubo",
+    "photo": 1,
+    "prompt": "Edit this exact interior photo to obey the supplied floor plan. The large white bedroom partition facing camera is its SOUTH wall and must be completely OPAQUE CONTINUOUS WHITE WALL: remove the open wooden doorway currently in this face near the right end, fill it with matching plaster and baseboard. The bedroom door is on the EAST SIDE wall around the corner, accessible from the right-hand indoor passage; it must not appear as a frontal opening on south wall. Preserve balcony glass on left, sink island edge on right, oak floor, lighting and camera. No added doors or windows.",
+    "mode": "built-in image generation edit"
+  },
+  {
+    "property": "noge",
+    "photo": 1,
+    "prompt": "Edit this exact living/kitchen render to match plan. Current silver fridge is on far RIGHT NORTH end of WEST kitchen, wrong. Remove that right-end fridge and fill with plain white wall continuation. Place one fridge instead at far LEFT SOUTH end of this same west kitchen, to LEFT of stove/hood and before the south balcony corner. Maintain sink to RIGHT NORTH and hob to LEFT SOUTH, entire straight kitchen counter on ONE west wall. Keep fixed timber peninsula, balcony glazing on left, pale wood floor, whites and daylight unchanged. Do not add new doorways.",
+    "mode": "built-in image generation edit"
+  },
+  {
+    "property": "noge",
+    "photo": 2,
+    "prompt": "Create a NEW closer kitchen photograph of the SAME apartment as reference image1 living photo, using reference2 floor plan exact layout. Landscape3:2. Camera in living EAST of west wall kitchen, facing WEST almost square-on. Along the SINGLE west wall counter from image LEFT SOUTH to RIGHT NORTH: fridge at far left south end, then hob and wall-mounted hood, then sink at right north end. White upper and lower cabinets. One fixed timber peninsula1.6m projects EAST toward camera from the south part of this same counter; its short end remains visibly attached to wall kitchen. It is NOT a detached island and contains NO sink or hob. South balcony light at extreme LEFT edge. North entry corridor off-view RIGHT, do not invent a front door straight ahead. No second parallel counter or additional wall. Pale oak floor, white walls, modest daylight; no furniture, text or plan inset.",
+    "mode": "built-in image generation edit"
+  },
+  {
+    "property": "kiyosumi",
+    "photo": 2,
+    "prompt": "Edit this exact kitchen photo: the open doorway at FAR LEFT currently incorrectly shows exterior balcony glass beyond the NORTH end of the counter. Replace ONLY that impossible balcony-glass view with a plain opaque off-white wall at the end of the indoor passage; no exterior opening visible there. Preserve current metal east-wall sink counter, stove, fridge at north end on left, oak trim and floor, camera and lighting. Actual south balcony is behind camera/right of counter, must not be newly added anywhere. No extra window or transparent door.",
+    "mode": "built-in image generation edit"
+  },
+  {
+    "property": "ota",
+    "photo": 5,
+    "prompt": "Recompose this exact washroom view to match plan: camera is just INSIDE SOUTH side of washroom looking NORTH. The whole back/NORTH wall is SOLID with NO doorway and NO view of entrance hall or front door. On that north wall place an empty washing-machine tray with tap on LEFT/NORTHWEST and fixed oak-front basin+mirror on RIGHT/NORTHEAST, side by side. Bathroom sliding doorway only on LEFT/WEST side wall near camera, glimpse plain unit bath beyond; NO bath window. Main hall is through EAST side entry BEHIND RIGHT camera, not directly ahead. White walls, warm oak basin front, water-resistant light floor. No movable furniture or machine. Landscape3:2.",
+    "mode": "built-in image generation edit"
+  },
+  {
+    "property": "kibogaoka",
+    "photo": 5,
+    "prompt": "Recompose this washroom view accurately: camera from SOUTH inside room looking NORTH. North/back wall is continuous SOLID WHITE WALL, NO front door or hallway visible ahead. Empty washing-machine recess/tray+tap at NORTHWEST on LEFT; fixed oak-front basin and mirrored cabinet at NORTHEAST on RIGHT, both side by side on north wall. Bathroom sliding doorway only in LEFT/WEST side wall near foreground; bath has small frosted window on its WEST exterior wall if visible. Main hall doorway is EAST behind-right camera and must not be visible straight ahead. Keep timber accents, light wet-area floor, white sanitary fittings, no furniture. Landscape3:2.",
+    "mode": "built-in image generation edit"
+  },
+  {
+    "property": "kibogaoka",
+    "photo": 1,
+    "prompt": "Edit this exact living image. Remove the ENTIRE open tatami-room doorway currently on the large white partition wall at right-center near the balcony. Fill opening including wooden jambs with matching opaque white plaster wall and baseboard, continuous from floor to ceiling. The entire EAST tatami partition seen on RIGHT must have no door, opening or window. Tatami room entrance is on its NORTH wall behind this camera and cannot be seen here. Preserve south exterior balcony glazing LEFT, dark oak floor, ceiling, sunlight and exact camera.",
+    "mode": "built-in image generation edit"
+  },
+  {
+    "property": "kibogaoka",
+    "photo": 2,
+    "prompt": "Edit this exact kitchen image: close the exposed toilet and washroom with ordinary opaque white sliding doors, no toilet bowl or basin visible. Replace the large opening into tatami room at EXTREME LEFT foreground with plain opaque white wall, because that opening is not on this side of the plan. Keep blue-tiled EAST kitchen on RIGHT, sink and hob, east exterior window, fridge, north entry hall and front door in background unchanged. Do not add interior glass or other openings. Preserve materials, lighting and camera.",
+    "mode": "built-in image generation edit"
+  },
+  {
+    "property": "noge",
+    "photo": 2,
+    "prompt": "Edit exact kitchen photo: replace the freestanding timber island in foreground by a TRUE PENINSULA connected to the white wall kitchen at the stove/LEFT end. Rotate wooden top90degrees: its long axis must run from back wall TOWARD CAMERA, perpendicular to white kitchen counter, not parallel. Short rear end attached to left/stove end of white counter; width0.60m,length1.60m. One solid timber support under front tip. No freestanding table, island or gap between its rear short end and kitchen counter. Preserve sink RIGHT, stove LEFT, fridge FAR LEFT, south balcony LEFT, white cabinets, floor, lighting and camera.",
+    "mode": "built-in image generation edit"
+  },
+  {
+    "property": "noge",
+    "photo": 1,
+    "prompt": "Edit exact living photo: the timber built-in worktop must be a true1.6m-long,0.6m-wide PENINSULA attached to the SOUTH/STOVE/LEFT end of the wall kitchen. Move its attachment from current RIGHT/SINK end to LEFT/STOVE end; its long axis projects away from WEST wall perpendicularly into living toward camera. Its short rear end touches white counter near stove, with one timber support under outer tip. No detached island or parallel separate counter. Keep fridge left of stove, sink right, south balcony left, white cabinets, pale floor, camera and daylight unchanged.",
+    "mode": "built-in image generation edit"
+  }
+]
