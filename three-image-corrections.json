@@ -1,0 +1,24 @@
+[
+  {
+    "pid": "nishiogikubo",
+    "index": 2,
+    "page": 1,
+    "prompt": "Use image2 as edit target, image1 authoritative floorplan. Change only bedroom entry. On SCREEN LEFT there is large blank wall front/south face ending at near-left inside corner. Bedroom door MUST be in its perpendicular EAST side face, just immediately behind this near corner, on LEFT SIDE of kitchen aisle opposite island sink. Make it a full normal-width 75cm hinged opaque wood door/opening, facing EAST into passage, close to SOUTH end of bedroom, NOT the tiny vertical slit far up the hall. From camera on southeast LDK floor looking northwest the door opening should be clearly visible on left receding sidewall with wood jamb and a glimpse of bedroom oak floor, solid white southface remains. Remove the tiny false slit on distant front-facing wall. Kitchen island right workingface drawers, stove on east wall right and fridge stay. Do not add a door on large southface.",
+    "path": "/workspace/scratch/ef3ac72d7b4a/generated_images/exec-42164354-7011-4b38-b61b-94ca5ddd0935.png"
+  },
+  {
+    "pid": "kiyosumi",
+    "index": 1,
+    "page": 4,
+    "prompt": "Discard incorrect image2 geometry; preserve only finishes. Rebuild view from SOUTH end of LDK looking NORTH, camera on living floor x2.2m fromwestwall,y9.3m southofnorthwall, eye1.45m. SOUTH balcony is BEHIND camera and must NOT be visible. EAST kitchen wall SCREEN RIGHT: nearest foreground HOB with hood, then sink farther back, refrigerator at NORTH/farthest end, north of fridge SOLID bathblock wall. WEST wall SCREEN LEFT has shallow oak fixed shelf nearforeground. Across NORTH middle of view is CLOSED SOLID toilet block's SOUTH wall projecting into space (about1.2m wide), no door on southface. To LEFT/west of toiletblock continuous oak passage goes NORTH toward entry and bedroom. Toilet door on WEST sideface, not directly on middlewall. No doorway or passage behind fridge, no other window. Main living area is4.5m EWwide x3.5m NSdeep; show realistic proportions moderate28mm wide angle, no cutaway. Graykitchen steelcounter oakfloorwhiteplaster, no furniture. This is living room showing kitchen and circulation, not photo facing southwindow.",
+    "path": "/workspace/scratch/ef3ac72d7b4a/generated_images/exec-5b5fb8f9-953f-44bf-9a0d-d27cd163b589.png",
+    "revisionPrompt": "Correct image1 only using exact floorplan image2. Remove the vertical projecting white pilaster at left by shelf: WEST wall must be a single FLAT uninterrupted plane all along shelf and corridor. Far NORTH end of left corridor is bedroom: change the distant door straight ahead to opaque LIGHT OAK BEDROOM hinged door, not apartment entry door. Apartment entry door is METAL dark gray and on corridor LEFT SIDE/WEST wall, midway along corridor, replacing nearest existing left hinged oak door. Close false recess between toiletblock and fridge with a flat solid white wall at north boundary; do not show any walk-through opening behind refrigerator. Preserve kitchen right, middle solid WC wall with door only westside, and floor, ceiling, shelf. No other openings or windows."
+  },
+  {
+    "pid": "ota",
+    "index": 1,
+    "page": 5,
+    "prompt": "Edit ONLY toilet opening location in image2 to match image1. Current open WC doorway with visible toilet at CENTER-RIGHT on FRONT-FACING SOUTH wall is WRONG. Fill that entire opening with SOLID WHITE PLASTER continuing same southface of WC block, no visible toilet or door on this face. Correct WC access is on its WEST SIDE face facing LEFT into entry hallway, directly to RIGHT of distant black frontdoor. Put one CLOSED opaque wood sliding door on that SIDEFACE, recessed at farback of hall, edge seen obliquely; keep its south/frontface solid blank. Keep visible oak alcove between WC southface and tatami NORTHwall, keep existing kitchen, fridge, left balcony, tatami opening and materials. No other changes. Do not put WC entrance into living-facing southwall.",
+    "path": "/workspace/scratch/ef3ac72d7b4a/generated_images/exec-048dc26c-34c4-47ec-b4c8-6022a9f72e8b.png"
+  }
+]
